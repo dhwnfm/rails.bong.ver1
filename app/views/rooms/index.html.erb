@@ -18,9 +18,10 @@
       <tbody>
         <% @rooms.each do |room| %>
           <tr>
-            <td><% room.images.each do |image| %>  
-               <%= image_tag image.image_url.url %> 
-               <% end %></td>
+            <td>
+                <% room.images.each do |image| %>  
+                <%= image_tag image.image_url.url %> 
+                <% end %></td>
             <td><%= room.name %></td>
             <td><%= room.introduction %></td>
             <td><%= room.price %></td>
