@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   get 'rooms/edit'
   get 'rooms/update'
   resources :rooms 
-  
+  resources :reservations
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

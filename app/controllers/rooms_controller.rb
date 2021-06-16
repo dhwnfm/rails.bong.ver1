@@ -1,17 +1,19 @@
 class RoomsController < ApplicationController
   def index
    @rooms = Room.all
+   
   end
 
   def new
    @room = Room.new  
    @room.images.build
-   @room.current_user.build
+   
   end
 
   def create
    
    @room = Room.new(params.require(:room).permit(:name, :introduction, :price, :address, :user_id, images_attributes: [:image_url]))
+   @room.user_id = current_user.id
    if @room.save
    flash[:notice] = "ルームを新規登録しました"
    redirect_to :user_session
@@ -21,6 +23,10 @@ class RoomsController < ApplicationController
   end
 
   def show
+   
+# ===============追加==============
+    @rooms = current_user.rooms.all
+# ================================
   end
 
   def edit

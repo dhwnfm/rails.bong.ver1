@@ -6,6 +6,7 @@
  <table>
       <thead>
         <tr>
+          <th>user</th>
           <th>ルームイメージ</th>
           <th>ルーム名</th>
           <th>ルーム紹介</th>
@@ -18,6 +19,7 @@
       <tbody>
         <% @rooms.each do |room| %>
           <tr>
+            <td><%= room.user_id %></td>
             <td>
                 <% room.images.each do |image| %>  
                 <%= image_tag image.image_url.url %> 

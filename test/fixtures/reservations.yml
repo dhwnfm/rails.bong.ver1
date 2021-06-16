@@ -3,11 +3,13 @@
 one:
   user: one
   room: one
-  start_date: 2021-06-09 10:38:49
-  end_date: 2021-06-09 10:38:49
+  start_date: 2021-06-16 01:57:40
+  end_time: 2021-06-16 01:57:40
+  people: 1
 
 two:
   user: two
   room: two
-  start_date: 2021-06-09 10:38:49
-  end_date: 2021-06-09 10:38:49
+  start_date: 2021-06-16 01:57:40
+  end_time: 2021-06-16 01:57:40
+  people: 1

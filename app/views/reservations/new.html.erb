@@ -1,0 +1,28 @@
+
+<%= render "shared/error", obj: @reservation %>
+<%= form_for @reservation do |f| %>
+      <table>
+
+        <tr>
+          <th><%= f.label :start_date ,"開始日" %></nth>
+          <td><%= f.date_field :start_date %></td>
+        </tr>
+        <tr>
+          <th><%= f.label :end_date ,"終了日" %></th>
+          <td><%= f.date_field :end_date  %></td>
+        </tr>
+        <tr>
+          <th><%= f.label :people , "人数" %></th>
+          <td><%= f.number_field :people , step: "1"  %></td>
+        </tr>
+      </table>
+ 
+      <div>
+        <ul>
+          <li><%= f.submit "予約する"%></li>
+        
+        
+        </ul>
+      </div>
+      
+<% end %>

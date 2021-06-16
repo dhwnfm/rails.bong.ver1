@@ -8,8 +8,9 @@
   <%= link_to "登録済み一覧", rooms_index_path, method: :get %>
   <%= link_to "設定", users_show_path, method: :get %> <!-- account確認をする -->
   <%= link_to "ログアウト", destroy_user_session_path, method: :delete %> <!-- ログアウトをする -->
-  
-  
+  <%= link_to "user room 一覧", rooms_show_path, method: :get %>
+  <%= link_to "ルーム予約", new_reservation_path, method: :get %>
+  <%= link_to "ルーム予約", reservations_path, method: :get %>
   
 <% else %>
   <!-- ユーザーがログインしていなかった時の処理 -->
