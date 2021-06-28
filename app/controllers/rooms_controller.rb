@@ -25,11 +25,19 @@ class RoomsController < ApplicationController
   def show
    
 # ===============追加==============
+  
     @rooms = current_user.rooms.all
 # ================================
   end
-
+  
+  def reserve
+   
+  end
+  
   def edit
+    @room = Room.find(params[:id])
+    @reservation = Reservation.new
+   
   end
 
   def update

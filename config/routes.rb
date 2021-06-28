@@ -3,13 +3,9 @@ Rails.application.routes.draw do
   root 'home#index'
   devise_for :users
   resources :users 
-  get 'rooms/index'
-  get 'rooms/new'
-  get 'rooms/create'
-  get 'rooms/show'
-  get 'rooms/edit'
-  get 'rooms/update'
   resources :rooms 
+  get '/reserve' => 'rooms#reserve'
   resources :reservations
+  get '/lend' => 'reservations#lend'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

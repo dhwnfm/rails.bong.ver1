@@ -5,7 +5,7 @@ ruby '2.6.3'
 
 gem 'bootstrap3-datetimepicker-rails'
 gem 'momentjs-rails', '>= 2.9.0'
-
+gem 'pry-rails'
 gem 'devise'
 
 gem 'carrierwave'

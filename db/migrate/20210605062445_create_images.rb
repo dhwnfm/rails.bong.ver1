@@ -3,7 +3,7 @@ class CreateImages < ActiveRecord::Migration[5.2]
     create_table :images do |t|
       t.string :image_url
       t.references :room, foreign_key: true
-
+      
       t.timestamps
     end
   end

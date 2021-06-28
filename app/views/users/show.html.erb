@@ -10,14 +10,15 @@
     <div class="box-data">
      ユーザ名 <%= @user.name %>
     </div>
+    
+　　 <div class="box-data"> 
+       <%= link_to "プロフィール" , new_user_path %>
+     </div>
     <div class="button">
       <%= link_to "編集", edit_user_registration_path %> 
       <%= link_to "Top pageに移動", user_session_path %> 
-      
-    </div>    
-    
-    
- </div>
+    </div>
+
  
 
 </div>
