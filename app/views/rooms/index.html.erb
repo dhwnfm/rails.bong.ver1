@@ -1,0 +1,36 @@
+<h2>登録済みルーム一覧</h2>
+<p><%= link_to "ルーム新規登録", :new_room %></p>
+    <% if flash.notice %>
+      <p class="notice"><%= flash.notice %></p>
+    <% end %>
+
+  <% @rooms.each do |room| %>
+    <div class="room-box">
+      <div class="box-inner">
+        <div class="box-name">
+          <% room.images.each do |image| %>  
+          <%= image_tag image.image_url.url %> 
+          <% end %>
+        </div>
+        <div class="box-name">
+          <%= room.name %>
+        </div>  
+        <div class="box-name">  
+          <%= room.address %>
+        </div>
+        <div class="box-name">
+          <%= room.price %>
+        </div>  
+        <div class="box-name">
+          <%= room.introduction %>
+        </div>  
+           <%= link_to "削除", room, method: :delete, data: { confirm: "本当に削除しますか？" } %>
+       
+          <%= link_to "予約", edit_room_path(room.id), method: :get %>
+          
+         </div>     
+     </div>
+    </div>            
+    <% end %>
+   
+    

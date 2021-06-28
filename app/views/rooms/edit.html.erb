@@ -1,0 +1,41 @@
+<%= render "shared/error", obj: @reservation %>
+<div class="room">
+ <div class="room-image">
+  <% @room.images.each do |image| %>  
+  <%= image_tag image.image_url.url %> 
+  <% end %>
+ </div>
+  <%= @room.name %>
+  <%= @room.address %>
+</div>
+
+<%= form_for @reservation do |f| %>
+ 
+ <div class="box">
+  <div class="box-inner">
+        <div class="box-name">
+          <%= @room.price %>/day
+        </div>  
+        <div class="box-name">
+           <span class="check">必須</span>
+            <%= f.label :start_date ,"開始日" %><br/>
+            <%= f.date_field :start_date %>
+        </div>
+        <div class="box-name">
+           <span class="check">必須</span>
+           <%= f.label :end_date ,"終了日" %><br/>
+           <%= f.date_field :end_date  %>
+        </div>
+        <div class="box-name">
+          <span class="check">必須</span>
+           <%= f.label :people , "人数" %><br/>
+           <%= f.number_field :people , step: "1"  %>
+        </div>
+        
+      </table>
+  
+      <div class="actions">
+          <%= f.submit "予約する"%>
+      </div>
+      
+<% end %>      
